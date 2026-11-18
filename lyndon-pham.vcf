@@ -1,0 +1,20 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Pham;Lyndon;;;
+FN:Lyndon Pham
+ORG:Drift Co.
+TITLE:Websites\, Systems & AI Agents
+TEL;TYPE=CELL,VOICE:+15149714365
+EMAIL;TYPE=INTERNET,WORK:lyndon@driftco.ca
+URL;TYPE=WORK:https://driftco.ca
+X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/phamlyndon/
+X-SOCIALPROFILE;TYPE=instagram:https://www.instagram.com/drift_co_main/
+item1.URL:https://www.linkedin.com/in/phamlyndon/
+item1.X-ABLabel:LinkedIn
+item2.URL:https://www.instagram.com/drift_co_main/
+item2.X-ABLabel:Instagram (Drift Co.)
+item3.URL:https://www.instagram.com/lyndon_ffam/
+item3.X-ABLabel:Instagram (Personal)
+ADR;TYPE=WORK:;;;Montréal;QC;;Canada
+NOTE:Met via my Drift Co. card. Websites\, booking systems and AI agents for businesses — driftco.ca
+END:VCARD
