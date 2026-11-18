@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Victor Mantino · Drift Co.</title>
+  <meta name="description" content="Victor Mantino — websites, systems and AI agents for businesses at Drift Co. Save my contact or connect on LinkedIn and Instagram.">
+  <meta name="theme-color" content="#040607">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:title" content="Victor Mantino · Drift Co.">
+  <meta property="og:description" content="Websites, systems & AI agents. Save my contact or connect with me.">
+  <link rel="icon" href="assets/drift-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@500;600;700&family=Funnel+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Drift Co. brand palette (from driftco.ca) */
+      --night: #040607;
+      --ink: #03110d;
+      --mint: #59f3c8;
+      --mint-hover: #86f7d8;
+      --teal: #1fb5a5;
+      --foam: #eef3ef;
+      --haze: #b3c0bc;
+      --muted: #8b9995;
+      --line: rgb(89 243 200 / 0.14);
+      --tile: rgb(238 243 239 / 0.04);
+      --tile-hover: rgb(89 243 200 / 0.08);
+      --display: "Funnel Display", ui-sans-serif, system-ui, sans-serif;
+      --sans: "Funnel Sans", ui-sans-serif, system-ui, sans-serif;
+      --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+    }
+    * { box-sizing: border-box; margin: 0; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      min-height: 100dvh;
+      background: var(--night);
+      color: var(--foam);
+      font-family: var(--sans);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed; inset: -20% -40% auto;
+      height: 70vh;
+      background: radial-gradient(ellipse at 50% 0%, rgb(89 243 200 / 0.16), rgb(31 181 165 / 0.05) 45%, transparent 70%);
+      pointer-events: none;
+    }
+    main {
+      position: relative;
+      max-width: 440px;
+      margin: 0 auto;
+      padding: max(28px, env(safe-area-inset-top)) 16px max(32px, env(safe-area-inset-bottom));
+    }
+    .brand { display: flex; justify-content: center; padding: 8px 0 36px; }
+    .brand img { height: 22px; width: auto; opacity: .9; }
+
+    .hero { text-align: center; }
+    .avatar {
+      width: 112px; height: 112px;
+      margin: 0 auto 22px;
+      border-radius: 50%;
+      display: grid; place-items: center;
+      background: var(--ink);
+      border: 1px solid var(--line);
+      box-shadow: 0 0 0 6px rgb(89 243 200 / 0.05), 0 18px 50px -20px rgb(89 243 200 / 0.45);
+      overflow: hidden;
+    }
+    .avatar img.mark { width: 54px; height: auto; margin-left: -4px; }
+    .avatar img.photo { width: 100%; height: 100%; object-fit: cover; }
+    h1 {
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: clamp(2.1rem, 9vw, 2.6rem);
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+    }
+    .role {
+      margin-top: 10px;
+      font-size: 1.05rem;
+      color: var(--haze);
+    }
+    .role strong { color: var(--foam); font-weight: 500; }
+    .meta {
+      margin-top: 14px;
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--mono);
+      font-size: .72rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .meta .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 10px var(--mint); }
+
+    .primary { margin-top: 30px; display: grid; gap: 10px; }
+    .btn {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      min-height: 54px;
+      padding: 0 20px;
+      border-radius: 14px;
+      font: 600 1rem/1 var(--sans);
+      text-decoration: none;
+      transition: background-color .15s, border-color .15s, transform .1s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .btn:active { transform: scale(.985); }
+    .btn svg { width: 20px; height: 20px; flex: none; }
+    .btn-save { background: var(--mint); color: var(--ink); }
+    .btn-save:hover { background: var(--mint-hover); }
+    .quick { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .btn-ghost { background: var(--tile); color: var(--foam); border: 1px solid var(--line); }
+    .btn-ghost:hover { background: var(--tile-hover); border-color: rgb(89 243 200 / 0.3); }
+
+    .section-label {
+      margin: 34px 0 12px;
+      font-family: var(--mono);
+      font-size: .7rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .links { display: grid; gap: 10px; list-style: none; padding: 0; }
+    .link {
+      display: flex; align-items: center; gap: 14px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: var(--tile);
+      border: 1px solid var(--line);
+      color: var(--foam);
+      text-decoration: none;
+      transition: background-color .15s, border-color .15s;
+    }
+    .link:hover { background: var(--tile-hover); border-color: rgb(89 243 200 / 0.3); }
+    .link .icon {
+      width: 40px; height: 40px; flex: none;
+      border-radius: 10px;
+      display: grid; place-items: center;
+      background: var(--ink);
+      color: var(--mint);
+    }
+    .link .icon svg { width: 20px; height: 20px; }
+    .link .text { min-width: 0; flex: 1; }
+    .link .title { display: block; font-weight: 600; }
+    .link .sub { display: block; font-size: .85rem; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .link .arrow { width: 16px; height: 16px; color: var(--muted); flex: none; }
+
+    .about {
+      margin-top: 34px;
+      padding: 20px;
+      border-radius: 16px;
+      background: linear-gradient(160deg, rgb(89 243 200 / 0.08), rgb(31 181 165 / 0.02));
+      border: 1px solid var(--line);
+    }
+    .about p { color: var(--haze); font-size: .95rem; }
+    .about .tagline {
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 1.25rem;
+      color: var(--foam);
+      margin-bottom: 6px;
+    }
+    .about .tagline span { color: var(--mint); }
+
+    footer {
+      margin-top: 36px;
+      text-align: center;
+      font-family: var(--mono);
+      font-size: .7rem;
+      color: var(--muted);
+      letter-spacing: .06em;
+    }
+    footer button {
+      margin-bottom: 14px;
+      background: none; border: 0; padding: 6px 10px;
+      color: var(--haze);
+      font: inherit; letter-spacing: inherit; text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--line);
+    }
+    :focus-visible { outline: 2px solid var(--mint); outline-offset: 3px; }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="brand">
+      <a href="https://driftco.ca" aria-label="Drift Co. website"><img src="assets/drift-logo-white.svg" alt="Drift Co."></a>
+    </div>
+
+    <section class="hero">
+      <div class="avatar">
+        <!-- To use a headshot: put photo.jpg in assets/ and replace the img below with
+             <img class="photo" src="assets/photo.jpg" alt="Victor Mantino"> -->
+        <img class="mark" src="assets/drift-mark-mint.svg" alt="">
+      </div>
+      <h1>Victor Mantino</h1>
+      <p class="role">Websites, systems &amp; AI agents<br>at <strong>Drift Co.</strong></p>
+      <p class="meta"><span class="dot"></span>Montréal · Toronto · Ottawa</p>
+    </section>
+
+    <div class="primary">
+      <a class="btn btn-save" href="victor-mantino.vcf" download="Victor Mantino.vcf">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>
+        Save my contact
+      </a>
+      <div class="quick">
+        <a class="btn btn-ghost" href="tel:+15145536032">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          Call
+        </a>
+        <a class="btn btn-ghost" href="mailto:victor@driftco.ca">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          Email
+        </a>
+      </div>
+    </div>
+
+    <h2 class="section-label">Connect</h2>
+    <ul class="links">
+      <li>
+        <a class="link" href="https://www.linkedin.com/in/victormantino/" target="_blank" rel="noopener">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></span>
+          <span class="text"><span class="title">LinkedIn</span><span class="sub">in/victormantino</span></span>
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+      </li>
+      <li>
+        <a class="link" href="https://driftco.ca" target="_blank" rel="noopener">
+          <span class="icon"><img src="assets/drift-mark-mint.svg" alt="" style="width:22px;height:auto;margin-left:-2px"></span>
+          <span class="text"><span class="title">Drift Co.</span><span class="sub">driftco.ca</span></span>
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+      </li>
+      <li>
+        <a class="link" href="https://www.instagram.com/drift_co_main/" target="_blank" rel="noopener">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r=".6" fill="currentColor"/></svg></span>
+          <span class="text"><span class="title">Instagram · Drift Co.</span><span class="sub">@drift_co_main</span></span>
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+      </li>
+      <li>
+        <a class="link" href="https://www.instagram.com/victormantino/" target="_blank" rel="noopener">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r=".6" fill="currentColor"/></svg></span>
+          <span class="text"><span class="title">Instagram · Personal</span><span class="sub">@victormantino</span></span>
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+      </li>
+    </ul>
+
+    <section class="about">
+      <p class="tagline">Stop drifting. <span>Start steering.</span></p>
+      <p>Drift Co. builds websites, online booking systems and AI agents that answer calls, follow up on leads and keep businesses moving, in English and French.</p>
+    </section>
+
+    <footer>
+      <button type="button" id="share" hidden>Share this page</button>
+      <p>© Drift Co. · driftco.ca</p>
+    </footer>
+  </main>
+  <script>
+    const shareBtn = document.getElementById('share');
+    if (navigator.share) {
+      shareBtn.hidden = false;
+      shareBtn.addEventListener('click', () => {
+        navigator.share({ title: 'Victor Mantino · Drift Co.', url: location.href }).catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>

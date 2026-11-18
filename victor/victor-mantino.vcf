@@ -1,0 +1,20 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Mantino;Victor;;;
+FN:Victor Mantino
+ORG:Drift Co.
+TITLE:Websites\, Systems & AI Agents
+TEL;TYPE=CELL,VOICE:+15145536032
+EMAIL;TYPE=INTERNET,WORK:victor@driftco.ca
+URL;TYPE=WORK:https://driftco.ca
+X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/victormantino/
+X-SOCIALPROFILE;TYPE=instagram:https://www.instagram.com/victormantino/
+item1.URL:https://www.linkedin.com/in/victormantino/
+item1.X-ABLabel:LinkedIn
+item2.URL:https://www.instagram.com/drift_co_main/
+item2.X-ABLabel:Instagram (Drift Co.)
+item3.URL:https://www.instagram.com/victormantino/
+item3.X-ABLabel:Instagram (Personal)
+ADR;TYPE=WORK:;;;Montréal;QC;;Canada
+NOTE:Met via my Drift Co. card. Websites\, booking systems and AI agents for businesses — driftco.ca
+END:VCARD
